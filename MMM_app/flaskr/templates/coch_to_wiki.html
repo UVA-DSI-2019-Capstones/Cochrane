@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}coch_to_wiki{% endblock %}
+
+{% block header %} 
+  <h1>Top 10 Wikipedia Article for the Cochrane Review</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post" class="coch_wiki">
+    <div class="group">
+      <label for="review">Cochrane title</label>
+      <input name="review" class="title">
+    </div>
+    <div class="group">
+      <label for="doi">Cochrane doi</label>
+      <input name="doi" class="doi">
+    </div>
+    <div class="group">
+      <input type="submit" value="submit" class="submit">
+    </div>
+  </form>
+  
+  <div>
+    <h3><a href="/">Back to Main</a></h3>
+  </div>
+{% endblock %}

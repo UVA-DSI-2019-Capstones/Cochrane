@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}wiki_to_coch{% endblock %}
+
+{% block header %} 
+  <h1>Top 10 Cochrane Reviews for the Wikipedia Article</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="wiki_article">Wikipedia Article</label>
+    <input name="article" class="title">
+    <input type="submit" value="submit" class="submit">
+  </form>
+  
+  <h3 class="display">
+    {{ article }}
+  </h3>
+  
+  <table id="wiki_to_coch">
+    <tr>
+      <th>Cochrane Review</th>
+      <th>Cochrane DOI</th>
+      <th>Similarity</th>
+    </tr>
+    {% for review, doi, similarity in result %}
+        <tr>
+          <td><a href="https://www.cochranelibrary.com/cdsr/doi/{{doi}}" class="table">{{ review }}</td>
+          <td>{{ doi }}</a></td>
+          <td>{{ similarity }}</td>
+        </tr>
+    {% endfor %}
+  </table>
+  
+  <div>
+    <h3><a href="/">Back to Main</a></h3>
+  </div>
+{% endblock %}
