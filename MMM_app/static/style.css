@@ -1,0 +1,70 @@
+body {
+	color: white;
+	background-size: cover;
+	font-family: "Arial", Sans-serif;
+}
+h1, h2, h3 {
+	text-align: center;
+}
+h3.display {
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+h3.instruction {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+h3.backmain {
+    position: absolute;
+    margin-left: 45%;
+    bottom: 20px;
+}
+div {
+	text-align: center;
+	display: inline;
+}
+form {
+	text-align: center;
+	font-size: 1.2em;
+}
+form.coch_wiki.group {
+	margin:10px 20px;
+}
+input {
+	margin: 1.5em;
+	border: 2px;
+	border-radius: 4px;
+	line-height: 18px;
+}
+input.title {
+	width: 30%;
+}
+input.submit {
+	width: 8%;
+}
+table, th, td {
+	border: 1px solid black;
+}
+table {
+	border-collapse: collapse;
+	border-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	background: white;
+	color: black;
+}
+th, td {
+	text-align: center;
+}
+a {
+	color: white;
+	text-decoration: None;
+}
+a:hover, a:active {
+	text-decoration: underline;
+}
+a.table {
+	color: black;
+}
