@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <h1>Top 10 Wikipedia Article for the Cochrane Review</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post" class="coch_wiki">
+    <label for="review">Cochrane title</label>
+    <input name="review" class="title">
+    <input type="submit" value="submit" class="submit">
+  </form>
+
+  <h3 class="display">Are you looking for one of the following reviews?</h3>
+
+  <table>
+    <tr>
+      <th>Similar Reviews</th>
+    </tr>
+    {% for review in review_list %}
+      <tr>
+        <td>{{ review }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+
+  <h3 class="display">If your review is one of these, copy and paste it to the input</h3>
+
+  <h3><a href="/">Back to Main</a></h3>
+{% endblock %}
